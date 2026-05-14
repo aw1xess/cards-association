@@ -71,12 +71,12 @@ const columns = [
 ];
 
 function App() {
-  const [activeCardIdx, setActiveCardIdx] = useState(null);
+  const [activeCardIdx, setActiveCardIdx] = useState<number | null>(null);
   const [dynamicText, setDynamicText] = useState(
     "Made for my sweetest girl whom I love so much❤️",
   );
 
-  const handleCardClick = (idx, text) => {
+  const handleCardClick = (idx: number, text: string) => {
     if (activeCardIdx === idx) {
       setActiveCardIdx(null);
       setDynamicText("Made for my sweetest girl whom I love so much❤️");
